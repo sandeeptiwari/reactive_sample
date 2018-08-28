@@ -1,4 +1,4 @@
-package com.sandi.take2;
+package com.sandi.take3;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -8,23 +8,18 @@ import java.util.Collections;
 import java.util.List;
 import java.util.function.ToDoubleFunction;
 
-import io.reactivex.Observable;
-
 public class Driver {
 
-	public static List<Data> datas = Collections.synchronizedList(new ArrayList<Data>());
-	
 	public static void main(String[] args) throws IOException {
-		//convert list into observable
-		Observable<Data> observable = Observable.fromIterable(datas);
-		SimpleObserver simpleObserver = new SimpleObserver();
-		
+		List<Data> datas = Collections.synchronizedList(new ArrayList<Data>());
+
+		//reader input datas
 		BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 
 		Data data = null;
 		String productName = null;
 		double price = 0.0;
-		System.out.println("Reactive style using rxjava");
+		System.out.println("Reactive style");
 		while(true) {
 			System.out.println("Please enter name -> ");
 			productName = reader.readLine();
@@ -45,7 +40,9 @@ public class Driver {
 			else
 				datas.add(data);
 			
-			observable.subscribe(simpleObserver);
+			datas.stream().map(e -> e.getProductName() +" "+e.getPrice()).forEach(System.out::println);
+
+			System.out.println(datas.stream().mapToDouble(value -> value.getPrice()).sum());
 		}
 	}
 
