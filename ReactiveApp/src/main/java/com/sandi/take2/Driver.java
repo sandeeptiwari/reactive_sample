@@ -39,6 +39,8 @@ public class Driver {
 				datas.get(datas.indexOf(data)).setPrice(data.getPrice());
 			else
 				datas.add(data);
+			
+			datas.stream().map(e -> e.getProductName() +" "+e.getPrice()).forEach(System.out::println);
 
 			System.out.println(datas.stream().mapToDouble(value -> value.getPrice()).sum());
 		}
