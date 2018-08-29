@@ -1,0 +1,33 @@
+create database stock;
+use stock;
+
+create table sensex_data(company_name varchar(200), price double, pe float, peg float, div_share varchar(100), price_book varchar(100), change_from_50_days varchar(100), 
+change_from_200_days varchar(100), change_from_52_week_low varchar(100), short_ratio varchar(100));
+
+insert into sensex_data values('PHILIP MORRIS INT', 48.20, 1.20, 1.29,	'$0.00','N/A','-4%', '-4%', '3%','N/A');
+
+insert into sensex_data values('QWEST COMM INTL I' ,4.50, 2.96,1.64, '$0.08','14.29','-8%',	'-29%',	'3%',	'6.90');
+insert into sensex_data values('INGERSOLL RAND LT', 43.56, 3.24, 0.84,'$0.72','2.04', '0%',	'-5%',	'26%',	'5.40');
+insert into sensex_data values('JONES APPAREL GP ', 13.22,  4.30, 1.13,'$0.56','0.56',	'-4%',	'-20%',	'9%',	'4.70');
+insert into sensex_data values('ALTRIA GROUP INC', 21.7, 4.69, 1.52,'$54.00', '2.47', '-61%',	'-69%', '4%',	'1.70');
+
+insert into sensex_data values('NEW M&I CORPORATI', 21.94,5.06,1.28,'$9.30','0.82','-7%','-26%','5%','3.60');
+insert into sensex_data values('VALERO ENERGY CP', 48.56,5.47,0.49,'$0.48','1.41','-7%','-21%','8%','0.60');
+insert into sensex_data values('MARSH MCLENNAN CO',26.66,5.89,2.31,'$0.78','1.77','5%', '3%','15%','2.40');
+insert into sensex_data values('GANNETT CO INC',27.39,6.07,2.69,'$1.51','0.70','-8%','-24%','1%','6.00');
+insert into sensex_data values('WINDSTREAM CORP',11.85,6.11,2.68,'$1.00','7.69','-1%,-6%,14%','3.10');
+insert into sensex_data values('ALLSTATE CP',48.55,6.25,1.10,'$1.55','1.25','1%','-5%','9%','1.60');
+insert into sensex_data values('TESORO CORP',25.98,6.40,0.56,'$0.40','1.17','-19%','-40%','4%','1.20');
+insert into sensex_data values('SAFECOCP', 45.00,6.46,0.79,'$1.60','1.19','1%','-14%', '10%','2.90');
+insert into sensex_data values('LEHMAN BROS HLD',39.67,6.51,0.70, '$0.62','1.00','-12%','-30%','96%','0.90');
+insert into sensex_data values('BEAR STEARNS COS' ,9.98,6.55,0.15,'$0.96','0.12','-72%','-88%','251%','0.30');
+insert into sensex_data values('SUNOCO INC',52.05,7.01,0.63,'$1.10','2.42','-7%', '-19%','9%','2.20');
+insert into sensex_data values('OFFICEMAX INC',18.80,7.06,0.90,'$0.60','0.64','-9%','-22%','10%','3.70');
+insert into sensex_data values('CHUBB CP THE',49.50,7.06,0.87,'$1.20','1.28','-2%','-5%','8%','0.90');
+insert into sensex_data values('THE TRAVELERS CO',48.73,7.10,0.87,'$1.16','1.15','2%','-3%','13%','1.50');
+insert into sensex_data values('D T E ENERGY CO H',41.55,7.27,2.79,'$2.12','1.16','4%','-7%','10%','7.80');
+insert into sensex_data values('ROCKWELL AUTOMAT',56.77,7.29,0.93,'$1.16','4.72','1%','-10%','14%','3.40');
+insert into sensex_data values('ACE LTD',56.66,7.39,0.63,'$1.08','1.12','1%','-4%','10%','1.50');
+insert into sensex_data values('CINCINNATI FIN',37.04,7.46,1.15,'$1.46','1.04','-3%','-6%','10%','2.10');
+insert into sensex_data values('OFFICE DEPOT INC', 10.91,7.61,0.81,'$0.00','0.97','-6%','-28%','3%','3.40');
+insert into sensex_data values('COMERICA INC',33.69,7.61,2.03,'$2.58','0.99','-9%','-20%','2%','2.70');
